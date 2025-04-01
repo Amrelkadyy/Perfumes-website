@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr {
+  display: block;
+}
+
+*{
+  font-family:Outfit;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width:640px){
+  a.active{
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Navbar fixed position */
+.navbar {
+  position: fixed; /* Fixes the navbar to the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Ensures the navbar stays on top of content */
+  background-color: white; /* Add background color to prevent transparency */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  display: flex;
+  justify-content: space-between; /* Keep the content spaced evenly (logo, menu, icons) */
+  padding: 10px 20px; /* Adds padding to the navbar */
+}
+
+/* Make bullets transparent */
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  border: 2px solid #fff; /* Add an outline (change color as needed) */
+  width: 14px;
+  height: 14px;
+  border-radius: 50%; /* Keep them circular */
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Make active bullet more visible */
+.swiper-pagination-bullet-active {
+  background-color: transparent !important;
+  border: 4px solid white; /* Change active bullet outline color */
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+
+/* Ensure Swiper container takes full height */
+.swiper-container {
+  height: 100%; /* Make sure it fills the container */
+}
+
+/* Ensure each slide fills the swiper */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the background properly */
+}
